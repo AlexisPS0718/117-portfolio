@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock title %} - Alexis Peñuñuri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lexend+Deca:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <link rel="stylesheet" href="{% static 'css/sections.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="{% url 'home' %}">
+        <h1>Alexis Peñuñuri</h1>
+      </a>
+    </div>
+    <nav>
+      <input type="checkbox" id="cb-ham">
+      <div class="ham-btn">
+        <label for="cb-ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-items" id="nav-items">
+        <a class="highlight" href="{% url 'home' %}">About me</a>
+        <a class="highlight" href="{% url 'projects' %}">Projects</a>
+        <a class="highlight" href="#">Experience</a>
+        <a class="highlight" href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer></footer>
+</body>
+
+</html>

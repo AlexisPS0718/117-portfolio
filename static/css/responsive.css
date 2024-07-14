@@ -1,0 +1,170 @@
+@media(max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  /* Header */
+  header {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+  }
+
+  .nav-items a {
+    margin-bottom: 3rem;
+  }
+
+  .nav-items a:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .ham-btn {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ham-btn:hover {
+    cursor: pointer;
+  }
+
+  .ham-btn span {
+    display: block;
+    background-color: var(--light-color);
+    height: 3px;
+    width: 20px;
+    margin: 4px auto;
+    border-radius: 10px;
+  }
+
+  #cb-ham:checked~.nav-items {
+    display: flex;
+    margin-top: -1rem;
+  }
+
+  #cb-ham:not(:checked)~.nav-items {
+    display: none;
+  }
+
+  /* About me */
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .main-img {
+    width: 50%;
+  }
+
+  .main-img img {
+    margin-right: 0;
+  }
+
+  .dev-info-container {
+    width: 85%;
+  }
+
+  .dev-info,
+  .dev-skills {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dev-info h2,
+  .dev-info h3 {
+    margin-bottom: 1rem;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+  }
+
+  /* Projects */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media((min-width: 641px) and (max-width: 1024px)) {
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  /* About me */
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .main-img {
+    width: 60%;
+  }
+
+  .main-img img {
+    margin-right: 0;
+  }
+
+  .dev-info-container {
+    width: 80%;
+  }
+
+  .dev-info,
+  .dev-skills {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dev-info h2,
+  .dev-info h3 {
+    margin-bottom: 1rem;
+  }
+
+  .skills {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+  }
+
+  /* Projects */
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .project-skills {
+    grid-template-columns: repeat(5, 1fr);
+    width: 50%;
+  }
+}

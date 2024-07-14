@@ -1,0 +1,86 @@
+:root {
+  --primary-color: #2F64CC;
+  --primary-color-100: #D6E0F5;
+  --primary-color-200: #ACC1EC;
+  --primary-color-300: #83A3E2;
+  --primary-color-400: #5984D9;
+  --primary-color-600: #2651A6;
+  --primary-color-700: #1D3D7C;
+  --primary-color-800: #132853;
+
+  --secondary-color: #FFD700;
+  --secondary-color-100: #FFF7CC;
+  --secondary-color-200: #FFF099;
+  --secondary-color-300: #FFE866;
+  --secondary-color-400: #FFE033;
+  --secondary-color-600: #CCAD00;
+  --secondary-color-700: #998200;
+  --secondary-color-800: #665700;
+
+  --dark-color: #121212;
+  --light-color: #FEFEFE;
+
+  --background-color: #121212;
+  --surface-color: #181818;
+
+  --lexend-deca: "Lexend Deca", sans-serif;
+  --alata: "Alata", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--lexend-deca);
+}
+
+html {
+  background-color: var(--background-color);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+h1 {
+  font-family: var(--alata);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--light-color);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--light-color);
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
