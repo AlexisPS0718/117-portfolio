@@ -2,6 +2,7 @@
 .about-section {
   display: flex;
   flex-direction: row-reverse;
+  height: 85vh;
 }
 
 .main-img {

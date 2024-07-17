@@ -45,10 +45,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  padding-bottom: 3rem;
-}
-
 h1 {
   font-family: var(--alata);
   font-size: 1.8rem;

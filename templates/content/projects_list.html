@@ -7,54 +7,19 @@
 <section class="container pt-2" id="projects">
   <h2 class="highlight">🖥️ Projects</h2>
   <div class="projects">
-    <a href="https://github.com/AlexisPS0718" class="project-card" target="_blank">
-      <img src="{% static 'img/placeholder.png' %}" alt="">
-      <h3 class="highlight">Project name</h3>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, natus.</p>
-      <p><i>YYYY</i></p>
+    {% for project in projects_list %}
+    <a href="{{ project.repo }}" class="project-card" target="_blank">
+      <img src="{{ project.image }}" alt="">
+      <h3 class="highlight">{{ project.name }}</h3>
+      <p>{{ project.desc }}</p>
+      <p><i>{{ project.year }}</i></p>
       <div class="project-skills">
-        <p>Java</p>
-        <p>Python</p>
-        <p>C#</p>
-        <p>PHP</p>
-        <p>SQL</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
+        {% for skill in project.skills.all %}
+        <p>{{ skill.name }}</p>
+        {% endfor %}
       </div>
     </a>
-    <a href="https://github.com/AlexisPS0718" class="project-card" target="_blank">
-      <img src="{% static 'img/placeholder.png' %}" alt="">
-      <h3 class="highlight">Project name</h3>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, natus.</p>
-      <p><i>YYYY</i></p>
-      <div class="project-skills">
-        <p>Java</p>
-        <p>Python</p>
-        <p>C#</p>
-        <p>PHP</p>
-        <p>SQL</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
-      </div>
-    </a>
-    <a href="https://github.com/AlexisPS0718" class="project-card" target="_blank">
-      <img src="{% static 'img/placeholder.png' %}" alt="">
-      <h3 class="highlight">Project name</h3>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, natus.</p>
-      <p><i>YYYY</i></p>
-      <div class="project-skills">
-        <p>Java</p>
-        <p>Python</p>
-        <p>C#</p>
-        <p>PHP</p>
-        <p>SQL</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
-      </div>
-    </a>
+    {% endfor %}
   </div>
 </section>
 {% endblock content %}
