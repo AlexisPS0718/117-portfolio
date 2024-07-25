@@ -3,6 +3,6 @@ from .models import Project
 
 def projects_view(request):
   projects = Project.objects.all()
-  return render(request, 'content/projects_list.html', {
+  return render(request, 'pages/index.html', {
     'projects_list': projects,
   })

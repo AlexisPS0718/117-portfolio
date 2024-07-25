@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portfolio{% endblock title %}
+
+{% block content %}
+<section class="about-section" id="about">
+  <div class="main-img">
+    <img src="{% static 'img/laptop-icon.webp' %}" alt="Logo">
+  </div>
+  <div class="dev-info-container">
+    <div class="dev-info">
+      <h2>WELCOME, I AM <span class="highlight">ALEXIS</span></h2>
+      <h3>Web Developer</h3>
+      <p><b>I'm mainly interested in web development.</b> Currently studying a degree in Computer Systems
+        Engineering at Instituto Tecnológico de Mexicali. </p>
+      <br>
+      <p><b>I like to design. Coding the design, even more.</b> Making designs that are intuitive, minimalist and
+        responsive is one of my priorities.</p>
+      <br>
+      <p>I like videogames and cats. 🎮 🐈</p>
+    </div>
+    <div class="dev-skills">
+      <h3>My skills</h3>
+      <div class="skills">
+        <p>Java</p>
+        <p>Python</p>
+        <p>C#</p>
+        <p>PHP</p>
+        <p>SQL</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <input type="checkbox" id="cb-skills">
+        <p class="more-skills">Bootstrap</p>
+        <p class="more-skills">Tailwind</p>
+        <p class="more-skills">React</p>
+        <p class="more-skills">Django</p>
+        <p class="more-skills">OOP</p>
+        <p class="more-skills">Networking</p>
+        <div class="btn-skills">
+          <label for="cb-skills">
+            <p></p>
+          </label>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="container pt-2" id="projects">
+  <h2 class="highlight">🖥️ Projects</h2>
+  <div class="projects">
+    {% for project in projects_list %}
+    <a href="{{ project.repo }}" class="project-card" target="_blank">
+      <img src="{{ project.image }}" alt="">
+      <h3 class="highlight">{{ project.name }}</h3>
+      <p>{{ project.desc }}</p>
+      <p><i>{{ project.year }}</i></p>
+      <div class="project-skills">
+        {% for skill in project.skills.all %}
+        <p>{{ skill.name }}</p>
+        {% endfor %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container pt-2" id="contact">
+  <h2 class="highlight mb-05">✉️ Contact</h2>
+  <p class="mb-05">Please fill out each of the following fields to contact me by email.</p>
+  <form action="." method="POST" class="contact-form">
+    {% csrf_token %}
+    {{ form.name }}
+    {{ form.email }}
+    {{ form.subject }}
+    {{ form.message }}
+    <div>
+      <button>Send email</button>
+      <button>Reset</button>
+    </div>
+  </form>
+</section>
+{% endblock content %}
