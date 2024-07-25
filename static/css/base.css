@@ -29,7 +29,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  border: 0;
   font-family: var(--lexend-deca);
 }
 
@@ -43,6 +43,17 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
 }
 
 h1 {

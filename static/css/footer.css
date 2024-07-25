@@ -1,29 +1,43 @@
-header {
+footer {
   display: flex;
   align-items: center;
   background-color: var(--surface-color);
-  border-bottom: 1px solid var(--light-color);
+  border-top: 1px solid var(--light-color);
   position: sticky;
   top: 0;
+  width: 100%;
 }
 
-header a {
+footer a {
   text-decoration: none;
   color: var(--light-color);
 }
 
-.nav-header {
-  width: 100%;
+.nav-footer {
+  width: 55%;
 }
 
-.logo {
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+}
+
+.sm-icon {
+  display: inline-block;
+  color: var(--light-color);
+  font-size: 2.3rem;
+}
+
+.logo-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 20%;
-  margin-left: 3rem;
-  margin-right: 2rem;
+  width: 10%;
+  margin-left: 7rem;
+  margin-right: 9rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
